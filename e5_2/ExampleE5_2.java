@@ -22,7 +22,7 @@ public class ExampleE5_2 {
         if (Math.abs(number) < 1) {
             System.out.println("small");
         } else if (Math.abs(number) > 1000000) {
-            System.out.println(0"large");
+            System.out.println("large");
         }
 
     }
