@@ -1,6 +1,7 @@
 package e6_16;
 
 
+
 public class ExampleE6_16 {
     public static void main(String[] args) {
 
