@@ -206,34 +206,6 @@ public class Main {
                             System.out.println("your ID: " + employee.getEmployeeID());
                         }
 
-
-
-
-
-
-
-
-
-//                        if(save.doesEmployeeExists()){
-//                            System.out.println("You have already registered!");
-//                            employee = save.loadEmployee(employee.getFirstName(), employee.getLastName());
-//                        }
-//                        else{
-//                            employee = new Employee();
-//                            employee.employeeLogin(save);
-//                            save.saveEmployeeInfo(employee);
-//                        }
-//
-//                        System.out.println("Do you want to edit your information?(Y/N)");
-//                        String choose1 = scanner.nextLine().toLowerCase();
-//
-//                        if(choose1.equals("y")) {
-//                            employee.editEmployeeInfo();
-//                            save.saveEmployeeInfo(employee);
-//                            System.out.println("Your information has been edited");
-//                            System.out.println("your ID: " + employee.getEmployeeID());
-//                        }
-
                         break;
 
                     case 2:

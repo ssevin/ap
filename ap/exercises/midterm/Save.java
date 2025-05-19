@@ -38,9 +38,9 @@ public class Save {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             int count = 0;
             while (reader.readLine() != null) {
-                String line1 = reader.readLine(); // نام
-                String line2 = reader.readLine(); // نام خانوادگی
-                String line3 = reader.readLine(); // شناسه
+                String line1 = reader.readLine();
+                String line2 = reader.readLine();
+                String line3 = reader.readLine();
                 if(line1 != null && line2 != null && line3 != null) {
                     count++;
                 }
@@ -109,38 +109,6 @@ public class Save {
         }
         return null;
 
-//            Scanner scanner = new Scanner(file);
-//            while (scanner.hasNextLine()) {
-//                String line = scanner.nextLine();
-//                if (line.contains("Employee ID: " + employeeID)) {
-//                    Employee employee = new Employee();
-//                    employee.setEmployeeID(employeeID);
-//
-//                    // Read the next line for the first name.
-//                    if (scanner.hasNextLine()) {
-//                        String nameLine = scanner.nextLine();
-//                        if (nameLine.startsWith("First name: ")) {
-//                            employee.setFirstName(nameLine.substring("First name: ".length()));
-//                        }
-//                    }
-//
-//                    // Read the next line for the last name.
-//                    if (scanner.hasNextLine()) {
-//                        String lastNameLine = scanner.nextLine();
-//                        if (lastNameLine.startsWith("Last name: ")) {
-//                            employee.setLastName(lastNameLine.substring("Last name: ".length()));
-//                        }
-//                    }
-//
-//                    scanner.close();
-//                    return employee;
-//                }
-//            }
-//            scanner.close();
-//        } catch (IOException e) {
-//            System.err.println("Error reading employee information: " + e.getMessage());
-//        }
-//        return null;
     }
 
 
@@ -170,80 +138,6 @@ public class Save {
         }
     }
 
-
-
-//    public void saveEmployeeInfo(Employee employee) {
-//    try {
-//
-//        ArrayList<Employee> allEmployees = new ArrayList<>();
-//        if (new File(EMPLOYEE_FILE).exists()) {
-//            BufferedReader reader = new BufferedReader(new FileReader(EMPLOYEE_FILE));
-//            String line;
-//            while ((line = reader.readLine()) != null) {
-//                if (line.startsWith("First name: ")) {
-//                    String firstName = line.substring("First name: ".length());
-//                    String lastName = reader.readLine().substring("Last name: ".length());
-//                    int id = Integer.parseInt(reader.readLine().substring("employee ID: ".length()));
-//                    allEmployees.add(new Employee(firstName, lastName, id));
-//                }
-//            }
-//            reader.close();
-//        }
-//
-//
-//        FileWriter fw = new FileWriter(EMPLOYEE_FILE);
-//        for (Employee emp : allEmployees) {
-//            if (emp.getEmployeeID() == employee.getEmployeeID()) {
-//
-//                fw.write("First name: " + employee.getFirstName() + "\n");
-//                fw.write("Last name: " + employee.getLastName() + "\n");
-//                fw.write("employee ID: " + employee.getEmployeeID() + "\n");
-//            } else {
-//
-//                fw.write("First name: " + emp.getFirstName() + "\n");
-//                fw.write("Last name: " + emp.getLastName() + "\n");
-//                fw.write("employee ID: " + emp.getEmployeeID() + "\n");
-//            }
-//        }
-//        fw.close();
-//    } catch (Exception e) {
-//        System.err.println("Error saving employee information: " + e.getMessage());
-//    }
-//}
-
-//    public void saveEmployeeInfo(Employee employee) {
-//
-//        try (FileWriter fw = new FileWriter(EMPLOYEE_FILE , true)) {
-//
-//            fw.write("First name: " + employee.getFirstName() + "\n");
-//            fw.write("Last name: " + employee.getLastName() + "\n");
-//            fw.write("employee ID: " + employee.getEmployeeID() + "\n");
-//
-//        } catch (Exception e) {
-//            System.err.println("Error saving employee information: " + e.getMessage());
-//        }
-//    }
-//
-//    public boolean verifyEmployee(int employeeID) {
-//        try {
-//            File file = new File(EMPLOYEE_FILE);
-//            if (!file.exists()) return false;
-//
-//            Scanner scanner = new Scanner(file);
-//            while (scanner.hasNextLine()) {
-//                String line = scanner.nextLine();
-//                if (line.contains("employee ID: " + employeeID)) {
-//                    scanner.close();
-//                    return true;
-//                }
-//            }
-//            scanner.close();
-//        } catch (IOException e) {
-//            System.err.println("Error verifying employee: " + e.getMessage());
-//        }
-//        return false;
-//    }
-
     public Employee loadEmployee(String firstName, String lastName) {
         try {
             File file = new File(EMPLOYEE_FILE);
@@ -270,9 +164,6 @@ public class Save {
         }
         return null;
     }
-
-
-
 
     public void saveBooks(ArrayList<Book> books) {
 

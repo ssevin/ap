@@ -66,41 +66,11 @@ public class Manager {
         System.out.println("Employee added successfully with ID: " + employeeID);
     }
 
-
-//    public void addEmployee(Save save) {
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.println("Enter employee's first name:");
-//        String firstName = scanner.nextLine();
-//
-//        System.out.println("Enter employee's last name:");
-//        String lastName = scanner.nextLine();
-//
-//        int employeeID = Employee.generateRandomEmployeeID();
-//        Employee employee = new Employee(firstName, lastName, employeeID);
-//
-//        save.saveEmployeeInfo(employee);
-//        System.out.println("Employee added successfully with ID: " + employeeID);
-//    }
-
     public void managerInfo() {
         System.out.println("First name: " + firstName);
         System.out.println("Last name: " + lastName);
         System.out.println("Degree: " + educationLevel);
     }
-
-//    public void managerInfo1(){
-//
-//        System.out.println("first name");
-//        System.err.println("Zahra");
-//
-//        System.out.println("last name");
-//        System.err.println("Ahmadi");
-//
-//        System.out.println("Degree");
-//        System.err.println("PhD in management.");
-//
-//    }
 
     public void showEmployeeInfo(Save save) {
         try {
@@ -137,19 +107,6 @@ public class Manager {
         } catch (IOException e) {
             System.err.println("Error reading employee information" + e.getMessage());
         }
-
-//            Scanner scanner = new Scanner(file);
-//            System.out.println("\n--- Employee Information ---");
-//            while (scanner.hasNextLine()) {
-//                String line = scanner.nextLine();
-//                System.out.println(line);
-//            }
-//            scanner.close();
-//        } catch (IOException e) {
-//            System.err.println("Error reading employee information: " + e.getMessage());
-//        }
-
-
 
     }
 }

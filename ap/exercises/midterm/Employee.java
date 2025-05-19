@@ -46,14 +46,6 @@ public class Employee {
         this.employeeID = employeeID;
     }
 
-//    public static int generateRandomEmployeeID() {
-//        Random random = new Random();
-//        return 100000000 + random.nextInt(900000000);
-//    }
-
-
-
-
     public void employeeLogin(Save save) {
         Scanner scanner = new Scanner(System.in);
 
@@ -79,24 +71,6 @@ public class Employee {
         }
 
     }
-
-
-
-//    public void employeeLogin(){
-//
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.println("Enter your first name:");
-//        this.firstName = scanner.nextLine();
-//
-//        System.out.println("Enter your last name:");
-//        this.lastName = scanner.nextLine();
-//
-//        this.employeeID = generateRandomEmployeeID();
-//        System.out.println("Your employee ID: " + this.employeeID);
-//        System.out.println("Welcome! " + this.firstName + " " + this.lastName);
-//
-//    }
 
 public void editEmployeeInfo() {
     Scanner scanner = new Scanner(System.in);
@@ -165,54 +139,6 @@ public void addBooks(Library library) {
         System.out.println("Employee ID: " + this.employeeID);
     }
 
-//    public void showEmployeeInfo(Save save) {
-//        if (this.employeeID == 0) {
-//            Employee loaded = save.loadEmployee(this.firstName, this.lastName);
-//
-//            if (loaded != null) {
-//                this.employeeID = loaded.getEmployeeID();
-//            } else {
-//                System.out.println("You are not registered yet!");
-//                return;
-//            }
-//
-//            System.out.println("\n--- Your Information ---");
-//            System.out.println("First name: " + this.firstName);
-//            System.out.println("Last name: " + this.lastName);
-//            System.out.println("Employee ID: " + this.employeeID);
-//
-//
-//        }
-
-//        try {
-//            File file = new File(save.EMPLOYEE_FILE);
-//            if (!file.exists()) {
-//                System.out.println("No employee information found!");
-//                return;
-//            }
-//
-//            Scanner scanner = new Scanner(file);
-//            boolean found = false;
-//            while (scanner.hasNextLine()) {
-//                String line = scanner.nextLine();
-//                if (line.contains("Employee ID: " + this.employeeID)) {
-//                    System.out.println("\n--- Your Information ---");
-//                    System.out.println(line);
-//                    System.out.println(scanner.nextLine());
-//                    System.out.println(scanner.nextLine());
-//                    found = true;
-//                    break;
-//                }
-//            }
-//
-//            if (!found) {
-//                System.out.println("Your information not found in records!");
-//            }
-//            scanner.close();
-//        } catch (IOException e) {
-//            System.err.println("Error reading employee information: " + e.getMessage());
-//        }
-
 public void borrowConfirm(Save save , Library library , Borrow borrow , Manager manager){
 
         Scanner scanner = new Scanner(System.in);
@@ -238,31 +164,6 @@ public void borrowConfirm(Save save , Library library , Borrow borrow , Manager 
     } else {
         System.out.println("Verification failed! Wrong employee ID.");
     }
-
-//    System.out.println("Enter your employee ID:");
-//    int inputID = scanner.nextInt();
-//    scanner.nextLine();
-//
-//    if(inputID == this.employeeID) {
-//        System.out.println("Verification successful!");
-//        System.out.println("The book loan has been approved by " + this.firstName + " " + this.lastName);
-//    } else {
-//        System.out.println("Verification failed! Wrong employee ID.");
-//    }
-
-
-//    System.out.println("Enter your first name:");
-//    String empFirstName = scanner.nextLine();
-//
-//    System.out.println("Enter your last name:");
-//    String empLastName = scanner.nextLine();
-
-//    if(empFirstName.equals(this.firstName) && empLastName.equals(this.lastName) ) {
-//        System.out.println("The book loan request has been approved by " + this.firstName + " " + this.lastName);
-//    }else{
-//        System.out.println("Employee verification failed! You are not registered.");
-//        manager.showEmployeeInfo(save);
-//    }
 }
 
     public void returnConfirm(Save save, Library library, Manager manager) {
