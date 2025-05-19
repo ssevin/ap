@@ -18,6 +18,10 @@ public class Student {
         this.dateOfMembership = dateOfMembership;
     }
 
+    public Student(){
+
+    }
+
     public String getFirstName() {
         return firstName;
     }
